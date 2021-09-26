@@ -3,6 +3,8 @@ import './app.css'
 import ForgotPassword from './pages/forgotpassword/ForgotPassword'
 import ResetPassword from './pages/resetpassword/ResetPassword'
 import Login from './pages/login/Login'
+import Login2 from './pages/login2/Login2'
+
 import SignUp from './pages/signup/SignUp'
 import Landing from "./pages/landingpage/Landing"
 import AdminHome from "./pages/home/Home"
@@ -38,6 +40,8 @@ function App() {
             <PrivateRoute exact path="/product/:productId" component={Product}/>
             <PrivateRoute exact path="/newproduct" component={NewProduct}/>
 
+
+            <Route exact path="/login2" component={Login2}/>
             <Route exact path="/">   <Landing />   </Route>
 
 
