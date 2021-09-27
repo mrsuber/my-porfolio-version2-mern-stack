@@ -1,8 +1,9 @@
 import React,{useEffect,useState} from 'react'
-import './header.css'
+import './header2.css'
+import {Link} from 'react-router-dom'
 
 
-const Header = ({handlePopUp}) => {
+const Header2 = ({logoutHandler}) => {
   const [show, handleShow]=useState(false);
   useEffect(()=>{
     window.addEventListener("scroll",()=>{
@@ -34,7 +35,14 @@ const Header = ({handlePopUp}) => {
           <a href="#">Interview Prep</a>
           <a href="#">Porfolio</a>
           <a href="#">Contact</a>
-          <span onClick={handlePopUp}>Dashbourd</span>
+          <Link to="/admin" className="link">Dashbourd</Link>
+          <button onClick={logoutHandler} className="logout-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Logout
+          </button>
         </div>
       </nav>
     </div>
@@ -43,4 +51,4 @@ const Header = ({handlePopUp}) => {
   )
 }
 
-export default Header
+export default Header2

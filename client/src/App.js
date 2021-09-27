@@ -42,7 +42,8 @@ function App() {
 
 
             <Route exact path="/login2" component={Login2}/>
-            <Route exact path="/">   <Landing />   </Route>
+            <Route exact path="/" component={Landing}/>
+            
 
 
 

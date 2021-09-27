@@ -11,9 +11,9 @@ const RegisterScreen = ({history}) => {
   const [error,setError]=useState('')
 
   useEffect(()=>{
-    // if(localStorage.getItem("authToken")){
-    //   history.push("/")
-    // }
+    if(localStorage.getItem("authToken")){
+      history.push("/")
+    }
   },[history])
 
   const registerHandler= async (e)=>{
