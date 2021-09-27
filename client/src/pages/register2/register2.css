@@ -3,15 +3,6 @@
   padding:0;
   font-family: sans-serif;
   background: linear-gradient(#141e30, #243b55);
-
-}
-.align2 {
-  margin:0;
-  padding:0;
-  font-family: sans-serif;
-  background: linear-gradient(#141e30, #243b55);
-  visibility: hidden;
-  opacity: 0;
 }
 
 .login-box {
@@ -134,7 +125,7 @@
   }
 }
 
-.login-box a span:nth-child(3) {
+.login-box button span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -171,37 +162,7 @@
     bottom: 100%;
   }
 }
-
-.login-subtext{
-  font-size: 0.7rem;
-  display: block;
-  margin: 0.5rem 0 0;
-  color: #03e9f4;
-
-}
-.register-link{
-cursor: pointer;
-}
-
-.activForm{
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-.close-box{
-  color: #fff;
-
-  float: right;
-  margin-top: -34px;
-    margin-right: -17px;
-    cursor: pointer;
-    transition: .5s;
-    font-size: 30px;
-}
-
-.close-box:hover{
-
-  color: #03e9f4;
-
-
+.submit-btn{
+  background-color: rgb(15 17 80);
+  border: none;
 }
