@@ -162,15 +162,3 @@
     bottom: 100%;
   }
 }
-
-.login-subtext{
-  font-size: 0.7rem;
-  display: block;
-  margin: 0.5rem 0 0;
-  color: #03e9f4;
-  
-}
-
-.login-register{
-color: #03e9f4;
-}

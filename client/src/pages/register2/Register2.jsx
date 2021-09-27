@@ -1,9 +1,9 @@
-import './login2.css'
+import './register2.css'
 import {useState,useEffect} from 'react'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 
-const Login2 = ({history}) => {
+const Register2 = ({history}) => {
 
   const [email,setEmail]=useState('')
   const [password,setPassword]=useState('')
@@ -56,11 +56,10 @@ const Login2 = ({history}) => {
       <span></span>
       Submit
     </a>
-    <span className="login-subtext">Don't have an account? Register</span>
   </form>
 </div>
     </div>
   )
 }
 
-export default Login2
+export default Register2
