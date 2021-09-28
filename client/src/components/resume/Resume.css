@@ -1,0 +1,12 @@
+.resume-container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 5rem 0;
+}
+
+.resume-right{
+  /* display: flex;
+  justify-content: flex-end;
+  flex-direction: column; */
+  padding-left: 5rem;
+}

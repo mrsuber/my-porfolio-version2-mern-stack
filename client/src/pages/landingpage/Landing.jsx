@@ -3,6 +3,8 @@ import Layout from '../../components/layout/Layout'
 import Header from '../../components/header/Header'
 import Login2 from '../login2/Login2'
 import Register2 from '../register2/Register2'
+import dashbourd from './dashboard.png'
+import SecondaryButton from '../../components/buttons/SecondaryButton'
 export default function Home({history}){
   function handlePopUp(){
     var blur = document.getElementById('blur')
@@ -35,38 +37,63 @@ export default function Home({history}){
   }
   return(
     <>
+    {/* header equivalent to above body{header tag} tag*/}
     <Header handlePopUp={handlePopUp}/>
+    {/* header ends*/}
 
+    {/* body equivalent to  body tag start*/}
     <div className="homepage" id="blur">
 
-    <div className="block">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div className="text">
-      <h1>The new Standard in online payment</h1>
-      <p>Stripe id the best software platform for running an internet business.
-      We handle billions of dollars every year for forward-thinking businesses around the world
-      </p>
-      <div className="button-area">
-        <a href="#"> Start Now </a>
-        <a href="#"> Contact Sales </a>
+        <div className="home-cover" id="home">
+          {/*this is where the gradient starts*/}
+                <div className="block">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+          {/*this is where the gradient ends*/}
 
-      </div>
-    </div>
-    <div className="Section-2">
-    </div>
+          {/*this is where the text container starts*/}
+                <div className="left-content">
+                    <div className="text">
+                    <h1> My portfolio web version 2.0</h1>
+                    <p>
+                    A MERN aplication with an amazing dashboard and a tutorial section to help perpare for job coding chanlange.
+                    </p>
+                      <div className="button-area">
+                        <a href="#"> Contact </a>
 
-    </div>
+                        <SecondaryButton onClick={handlePopUp} name={"Dashbourd"}/>
 
+                      </div>
+                    </div>
+                </div>
+          {/*this is where the text container ends*/}
+
+          {/*image container showing dashboard starts*/}
+                <div className="right-content">
+                    <div className="img-wrapper-tablet">
+                      <img src={dashbourd} alt="" />
+                    </div>
+                </div>
+          {/*image container showing dashboard ends*/}
+        </div>
+      <Layout handlePopUp={handlePopUp}/>
+    </div>
+    {/* body equivalent to  body tag end*/}
+
+    {/* footer start*/}
+    {/* footer end*/}
+
+    {/* pop up froms start*/}
     <div className="popup" id="popup">
     <Login2 history={history} handlePopUp2={handlePopUp2} closeform={closeform}/>
     </div>
     <div className="popup2" id="popup2">
       <Register2 history={history} handlePopUp2={handlePopUp2} closeform={closeform}/>
     </div>
+    {/* pop up froms end*/}
     </>
   )
 }

@@ -1,5 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import './header.css'
+import PrimaryButton from '../buttons/PrimaryButton'
 
 
 const Header = ({handlePopUp}) => {
@@ -19,6 +20,15 @@ const Header = ({handlePopUp}) => {
 
 
   },[])
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
 
   return (
@@ -26,15 +36,16 @@ const Header = ({handlePopUp}) => {
     <div className={`header ${show && "nav__black" }`}>
       <nav className="navigation" >
       <div className="navbar-left">
-        <a href="#" className="navbar__logo">Logo</a>
+        <a href="#home" className="navbar__logo">Mrsuber</a>
       </div>
 
         <div className="navbar-right">
-          <a href="#">Home</a>
-          <a href="#">Interview Prep</a>
+          <a href="#home">Home</a>
+          <a href="#interview_prep">Interview Prep</a>
           <a href="#">Porfolio</a>
           <a href="#">Contact</a>
-          <span onClick={handlePopUp}>Dashbourd</span>
+          <PrimaryButton onClick={handlePopUp} name={"Dashbourd"}/>
+
         </div>
       </nav>
     </div>

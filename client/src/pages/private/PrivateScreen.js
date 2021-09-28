@@ -1,7 +1,9 @@
 import {useState,useEffect} from 'react'
 import Header2 from '../../components/header2/Header2'
 import axios from 'axios'
-
+import dashbourd from '../landingpage/dashboard.png'
+import SecondaryButton from "../../components/buttons/SecondaryButton"
+import Layout from '../../components/layout/Layout'
 const PrivateScreen = ({history}) => {
   const [error,setError] =useState("")
   const [privateData,setPrivateData]=useState("");
@@ -36,40 +38,61 @@ const PrivateScreen = ({history}) => {
     localStorage.removeItem("authToken")
     history.push("/")
   }
+
+
   return (
     error? <span className="error-message">{error}</span>
     :
     <>
 
+    {/* header equivalent to above body{header tag} tag*/}
     <Header2 logoutHandler={logoutHandler}/>
+    {/* header ends*/}
 
+    {/* body equivalent to  body tag start*/}
     <div className="homepage" id="blur">
 
-    <div className="block">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
+        <div className="home-cover" id="home">
+          {/*this is where the gradient starts*/}
+                <div className="block">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+          {/*this is where the gradient ends*/}
+
+          {/*this is where the text container starts*/}
+                <div className="left-content">
+                    <div className="text">
+                    <h1> My portfolio web version 2.0</h1>
+                    <p>
+                    A MERN aplication with an amazing dashboard and a tutorial section to help perpare for job coding chanlange.
+                    </p>
+                      <div className="button-area">
+                        <a href="#"> Contact </a>
+
+                        <SecondaryButton  name={"Dashbourd"}/>
+
+                      </div>
+                    </div>
+                </div>
+          {/*this is where the text container ends*/}
+
+          {/*image container showing dashboard starts*/}
+                <div className="right-content">
+                    <div className="img-wrapper-tablet">
+                      <img src={dashbourd} alt="" />
+                    </div>
+                </div>
+          {/*image container showing dashboard ends*/}
+        </div>
+      <Layout />
     </div>
-    <div className="text">
-      <h1>The new Standard in online payment</h1>
-      <p>Stripe id the best software platform for running an internet business.
-      We handle billions of dollars every year for forward-thinking businesses around the world
-      </p>
-      <div className="button-area">
-        <a href="#"> Start Now </a>
-        <a href="#"> Contact Sales </a>
+    {/* body equivalent to  body tag end*/}
 
-      </div>
-    </div>
-    <div className="Section-2">
-    </div>
-
-    </div>
-
-
-
-      <div style={{background:"green", color:"white"}}>PrivateData:{privateData}</div>
+    {/* footer start*/}
+    {/* footer end*/}
 
     </>
 

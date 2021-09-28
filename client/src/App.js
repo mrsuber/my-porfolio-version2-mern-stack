@@ -18,6 +18,7 @@ import NewProduct from "./pages/newProduct/NewProduct"
 // routes
 import PrivateRoute from "./routing/PrivateRoute"
 import PrivateScreen from './pages/private/PrivateScreen'
+import InterviewPrep from './pages/private/interviewPrep/InterviewPrep'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
 
         <Switch>
             <PrivateRoute exact path="/private" component={PrivateScreen}/>
+            <PrivateRoute exact path="/private/interviewPrep" component={InterviewPrep}/>
             <Route exact path="/login" component={Login}/>
             <Route exact path="/register" component={SignUp}/>
             <Route exact path="/forgotpassword" component={ForgotPassword}/>
@@ -43,7 +45,7 @@ function App() {
 
             <Route exact path="/login2" component={Login2}/>
             <Route exact path="/" component={Landing}/>
-            
+
 
 
 
