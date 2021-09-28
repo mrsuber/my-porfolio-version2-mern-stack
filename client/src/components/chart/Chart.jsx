@@ -11,8 +11,8 @@ export default function Chart({title,data,dataKey,grid}){
       <ResponsiveContainer width="100%" aspect={4/1}>
         <LineChart data={data}  >
 
-          <XAxis dataKey="name" stroke="#5550bd" />
-          <Line type="monotone" dataKey={dataKey} stroke="#5550bd" activeDot={{ r: 8 }} />
+          <XAxis dataKey="name" stroke="#4fafda" />
+          <Line type="monotone" dataKey={dataKey} stroke="#4fafda" activeDot={{ r: 8 }} />
           <Tooltip />
           {grid && <CartesianGrid stroke="#e0dfdf" strokeDasharray="5 5"/>}
 

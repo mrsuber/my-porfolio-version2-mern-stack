@@ -27,7 +27,7 @@ const Header2 = ({logoutHandler}) => {
     <div className={`header ${show && "nav__black" }`}>
       <nav className="navigation" >
       <div className="navbar-left">
-        <a href="#" className="navbar__logo">Logo</a>
+        <a href="#" className="navbar__logo">Mrsuber</a>
       </div>
 
         <div className="navbar-right">

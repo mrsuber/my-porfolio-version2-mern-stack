@@ -1,6 +1,7 @@
 import {useState,useEffect} from 'react'
 import Header2 from '../../components/header2/Header2'
 import axios from 'axios'
+import dashbourd from '../landingpage/dashboard.png'
 
 const PrivateScreen = ({history}) => {
   const [error,setError] =useState("")
@@ -52,15 +53,18 @@ const PrivateScreen = ({history}) => {
       <span></span>
     </div>
     <div className="text">
-      <h1>The new Standard in online payment</h1>
-      <p>Stripe id the best software platform for running an internet business.
-      We handle billions of dollars every year for forward-thinking businesses around the world
+      <h1>This is my portfolio website version 2.0</h1>
+      <p>
+      A MERN aplication with an amazing dashboard and a tutorial section to help perpare for job coding chanlange.
       </p>
       <div className="button-area">
-        <a href="#"> Start Now </a>
-        <a href="#"> Contact Sales </a>
+      <a href="#"> Contact </a>
+      <a href="#"> Dashbourd </a>
 
       </div>
+    </div>
+    <div className="img-wrapper-tablet">
+      <img src={dashbourd} alt="" />
     </div>
     <div className="Section-2">
     </div>
