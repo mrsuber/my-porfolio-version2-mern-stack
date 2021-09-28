@@ -3,11 +3,24 @@ import './layout.css'
 import CardSection from '../card/CardSection'
 import Resume from '../resume/Resume'
 import code from "./images.jpeg"
-function goToInterviewPrepPage(){
-  console.log("am taking you to interview prep")
-}
+import { useHistory } from "react-router-dom";
 
-const Layout = () => {
+
+
+const Layout = ({handlePopUp}) => {
+  const history = useHistory();
+
+  function goToInterviewPrepPage(){
+    if(!localStorage.getItem("authToken")){
+      window.location.href='#home'
+      handlePopUp()
+    }
+    let path = "/private/interviewPrep";
+    history.push(path);
+    
+  }
+
+
   return (
     <div className='layout__container'>
     <div id="interview_prep">

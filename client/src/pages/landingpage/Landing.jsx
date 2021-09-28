@@ -79,7 +79,7 @@ export default function Home({history}){
                 </div>
           {/*image container showing dashboard ends*/}
         </div>
-      <Layout />
+      <Layout handlePopUp={handlePopUp}/>
     </div>
     {/* body equivalent to  body tag end*/}
 

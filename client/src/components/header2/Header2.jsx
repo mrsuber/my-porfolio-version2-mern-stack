@@ -3,7 +3,7 @@ import './header2.css'
 import {Link} from 'react-router-dom'
 
 
-const Header2 = ({logoutHandler}) => {
+const Header2 = ({logoutHandler,show2}) => {
   const [show, handleShow]=useState(false);
   useEffect(()=>{
     window.addEventListener("scroll",()=>{
@@ -21,18 +21,26 @@ const Header2 = ({logoutHandler}) => {
 
   },[])
 
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
   return (
     <header className="header__container">
-    <div className={`header ${show && "nav__black" }`}>
+    <div className={`header ${(show || show2) && "nav__black" }`}>
       <nav className="navigation" >
       <div className="navbar-left">
-        <a href="#" className="navbar__logo">Mrsuber</a>
+        <a href="#home" className="navbar__logo">Mrsuber</a>
       </div>
 
         <div className="navbar-right">
-          <a href="#">Home</a>
-          <a href="#">Interview Prep</a>
+          <a href="#home">Home</a>
+          <a href="#interview_prep">Interview Prep</a>
           <a href="#">Porfolio</a>
           <a href="#">Contact</a>
           <Link to="/admin" className="link">Dashbourd</Link>

@@ -21,6 +21,7 @@ const CardSection = ({title,text,img,alt,cote,cardTitle,cardSubtext,buttonName,g
         buttonName={buttonName}
         goToPage={goToPage}
 
+
         />
       </div>
 
