@@ -14,10 +14,12 @@ const Layout = ({handlePopUp}) => {
     if(!localStorage.getItem("authToken")){
       window.location.href='#home'
       handlePopUp()
+    }else{
+      let path = "/private/interviewPrep";
+      history.push(path);
     }
-    let path = "/private/interviewPrep";
-    history.push(path);
-    
+
+
   }
 
 

@@ -3,7 +3,7 @@ import './header2.css'
 import {Link} from 'react-router-dom'
 
 
-const Header2 = ({logoutHandler,show2}) => {
+const Header2 = ({logoutHandler}) => {
   const [show, handleShow]=useState(false);
   useEffect(()=>{
     window.addEventListener("scroll",()=>{
@@ -32,7 +32,7 @@ const Header2 = ({logoutHandler,show2}) => {
 });
   return (
     <header className="header__container">
-    <div className={`header ${(show || show2) && "nav__black" }`}>
+    <div className={`header ${show && "nav__black" }`}>
       <nav className="navigation" >
       <div className="navbar-left">
         <a href="#home" className="navbar__logo">Mrsuber</a>
