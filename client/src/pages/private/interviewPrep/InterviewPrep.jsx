@@ -4,7 +4,7 @@ import './InterviewPrep.css'
 const InterviewPrep = () => {
   return (
     <div className="interviewPrep__container">
-    <Header2 show2={true}/>
+    <Header2/>
     Interview prep page
     </div>
   )
